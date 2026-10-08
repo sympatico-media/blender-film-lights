@@ -1,0 +1,5 @@
+# Blender Asset Catalog Definition File
+VERSION 1
+
+f276180a-73ac-5940-88bb-33fe5701c1a7:Sympatico/Lighting:Lighting
+784e29cd-a7d2-592d-a96f-bce343712ab2:Sympatico/Diffusion:Diffusion

@@ -1,0 +1,28 @@
+{
+  "materials_updated": [
+    "Diffusion 2 | Silk",
+    "Diffusion 3 | Half Silk",
+    "Diffusion 4 | Quarter Silk",
+    "Diffusion 6 | 215 Half Tough Spun",
+    "Diffusion 7 | 250 Half White Diffusion",
+    "Diffusion 8 | Opal Frost",
+    "Diffusion 9 | Unbleached Muslin",
+    "Diffusion 10 | Bleached Muslin"
+  ],
+  "assignments": {
+    "Diffusion Frame / Solid": "Diffusion 1 | Solid black flag",
+    "Diffusion Frame / Silk": "Diffusion 2 | Silk",
+    "Diffusion Frame / Half Silk": "Diffusion 3 | Half Silk",
+    "Diffusion Frame / Quarter Silk": "Diffusion 4 | Quarter Silk",
+    "Diffusion Frame / Ultrabounce": "Diffusion 5 | Ultrabounce",
+    "Diffusion Frame / 215 Diffusion": "Diffusion 6 | 215 Half Tough Spun",
+    "Diffusion Frame / 250 Diffusion": "Diffusion 7 | 250 Half White Diffusion",
+    "Diffusion Frame / Opal": "Diffusion 8 | Opal Frost",
+    "Diffusion Frame / Unbleached Muslin": "Diffusion 9 | Unbleached Muslin",
+    "Diffusion Frame / Bleached Muslin": "Diffusion 10 | Bleached Muslin",
+    "COB Light / Full Silk": "Diffusion 2 | Silk",
+    "COB Light / Half Silk": "Diffusion 3 | Half Silk",
+    "COB Light / Quarter Silk": "Diffusion 4 | Quarter Silk"
+  },
+  "status": "passed"
+}

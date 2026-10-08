@@ -1,0 +1,44 @@
+Sympatico Lighting
+Creator: Sympatico Media, LLC
+Copyright 2026 Sympatico Media, LLC
+
+This repository contains two kinds of material under two different licenses.
+
+Blender assets (library/Sympatico_Lighting_Native.blend, docs/images/)
+------------------------------------------------------------------------
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+See LICENSE-ASSETS.txt for the controlling terms and warranty disclaimer.
+
+Suggested attribution:
+Sympatico Lighting by Sympatico Media, LLC — CC BY 4.0.
+https://creativecommons.org/licenses/by/4.0/
+Changes: describe modifications if you made any.
+
+Retain this notice and LICENSE-ASSETS.txt when redistributing the assets.
+
+Research and build scripts (research/)
+------------------------------------------------------------------------
+License: GNU General Public License v3.0 or later (GPL-3.0-or-later)
+https://www.gnu.org/licenses/gpl-3.0.html
+See LICENSE for the full text.
+
+Third-party reference data
+------------------------------------------------------------------------
+The fitted diffusion-fabric presets in research/diffusion_calibration_2026-10-07/
+are informed by published, manufacturer-authored technical data. These are
+reference sources for calibration, not redistributed material, and are not
+claims of exact photometric reproduction:
+
+- TRP Technical Fabric Photometric Test Data, 2025 edition — TRP Worldwide
+  https://trpworldwide.com/wp-content/uploads/2025/06/Photometric-Full-FINAL_V2.pdf
+- LEE 250 Half White Diffusion / LEE 410 Opal Frost — LEE Filters
+  https://leefilters.com/colour/250-half-white-diffusion/
+  https://leefilters.com/colour/410-opal-frost/
+- Rosco Filter Facts — Rosco
+  https://us.rosco.com/sites/default/files/content/resource/2022-10/Rosco_FilterFacts09_22.pdf
+
+See research/diffusion_calibration_2026-10-07/sources.json for the complete
+source register, including access dates and authority notes. Third-party
+reference materials retain their respective owners' rights and are not
+covered by either license above.

@@ -1,0 +1,59 @@
+{
+  "TRP2025": {
+    "title": "TRP Technical Fabric Photometric Test Data, 2025 edition",
+    "url": "https://trpworldwide.com/wp-content/uploads/2025/06/Photometric-Full-FINAL_V2.pdf",
+    "local_file": "sources/TRP_Photometric_2025.pdf",
+    "authority": "manufacturer; tests of own fabrics and identified comparison gels",
+    "accessed": "2026-10-07",
+    "sha256": "5b1e0b252550c1cc331b88f621a99ad9e7b9e2a57d646204c1cb546151855eb4",
+    "bytes": 7398880
+  },
+  "LEE250": {
+    "title": "LEE 250 Half White Diffusion",
+    "url": "https://leefilters.com/colour/250-half-white-diffusion/",
+    "authority": "manufacturer product page",
+    "accessed": "2026-10-07"
+  },
+  "LEE410": {
+    "title": "LEE 410 Opal Frost",
+    "url": "https://leefilters.com/colour/410-opal-frost/",
+    "authority": "manufacturer product page",
+    "accessed": "2026-10-07"
+  },
+  "LEE_LEGACY": {
+    "title": "LEE manufacturer brochure (legacy copy hosted by Thomann)",
+    "url": "https://images.thomann.de/pics/prod/leefilters_folder.pdf",
+    "local_file": "sources/LEE_legacy_manufacturer_brochure.pdf",
+    "authority": "manufacturer-authored primary document on distributor host; publication date unverified",
+    "accessed": "2026-10-07",
+    "sha256": "2e10a5fb67f10fdd48a3384dfc5f353b726a6f2feecb2e565cd649f6e3ce902a",
+    "bytes": 3739895
+  },
+  "LEE_COMPARE": {
+    "title": "LEE Diffusion Comparator",
+    "url": "https://leefilters.com/lighting/diffusion-comparator/",
+    "authority": "manufacturer comparison test",
+    "accessed": "2026-10-07"
+  },
+  "LEE_INDEX": {
+    "title": "LEE Diffusion Index",
+    "url": "https://leefilters.com/lighting/diffusion-index-ldi/",
+    "authority": "manufacturer index",
+    "accessed": "2026-10-07"
+  },
+  "ROSCO": {
+    "title": "Rosco Filter Facts",
+    "url": "https://us.rosco.com/sites/default/files/content/resource/2022-10/Rosco_FilterFacts09_22.pdf",
+    "local_file": "sources/Rosco_FilterFacts.pdf",
+    "authority": "manufacturer technical guide; legacy document",
+    "accessed": "2026-10-07",
+    "sha256": "8d4de6f8acc333b6815be1bd8aa8e12222fdf834535ede083101c32b398d0da8",
+    "bytes": 5754169
+  },
+  "ULTRA": {
+    "title": "TRP Black/White Ultrabounce",
+    "url": "https://trpworldwide.com/west/product/black-white-ultrabounce-2/",
+    "authority": "manufacturer product page",
+    "accessed": "2026-10-07"
+  }
+}

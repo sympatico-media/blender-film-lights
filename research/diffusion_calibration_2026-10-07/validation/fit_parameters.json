@@ -1,0 +1,237 @@
+{
+  "model": "energy-bounded transparent + Lambertian transmitted + Lambertian reflected closure",
+  "rig_status": "Published distances; approximate source; fitted central exposure and least-squares shadow falloff. Not exact manufacturer reproduction.",
+  "diffuse_basis_open_ratio": 0.5194512517794602,
+  "shadow_basis_ratios": [
+    0.1484831404269941,
+    0.03721480734737673
+  ],
+  "presets": {
+    "Diffusion 2 | Silk": {
+      "reference_product": "TRP White Polysilk (133)",
+      "pdf_page_1based": 53,
+      "target_loss_stops": 1.9,
+      "direct": 0.0,
+      "scattered": 0.5158200403140661,
+      "transmission_tint": [
+        1.0131882931439176,
+        0.9989160758473009,
+        0.9719029284157
+      ],
+      "reflection_rgb": [
+        0.11466,
+        0.11466,
+        0.11466
+      ],
+      "reference_CCT_in": 3250,
+      "reference_CCT_out": 3210,
+      "predicted_loss_stops": 1.9000000000000001,
+      "predicted_shadow_ev_10_20": [
+        7.5933107641010285,
+        5.596960307695017
+      ],
+      "reference_shadow_ev_10_20": [
+        7.4,
+        6.1
+      ],
+      "max_channel_energy": 0.6372828262152354
+    },
+    "Diffusion 3 | Half Silk": {
+      "reference_product": "TRP White China Silk (736)",
+      "pdf_page_1based": 28,
+      "target_loss_stops": 1.1,
+      "direct": 0.12386012962651116,
+      "scattered": 0.6596506697559597,
+      "transmission_tint": [
+        1.0098525614300553,
+        0.9991968828120062,
+        0.9789436960224842
+      ],
+      "reflection_rgb": [
+        0.0702,
+        0.0702,
+        0.0702
+      ],
+      "reference_CCT_in": 3250,
+      "reference_CCT_out": 3220,
+      "predicted_loss_stops": 1.1,
+      "predicted_shadow_ev_10_20": [
+        7.948145159995222,
+        5.9517947035892105
+      ],
+      "reference_shadow_ev_10_20": [
+        7.7,
+        6.2
+      ],
+      "max_channel_energy": 0.8614303876644984
+    },
+    "Diffusion 4 | Quarter Silk": {
+      "reference_product": "TRP White Quarter Silk (074)",
+      "pdf_page_1based": 26,
+      "target_loss_stops": 1.0,
+      "direct": 0.2403,
+      "scattered": 0.49995066738285393,
+      "transmission_tint": [
+        1.0165503128586275,
+        0.9986285601182547,
+        0.9648512089983375
+      ],
+      "reflection_rgb": [
+        0.0351,
+        0.0351,
+        0.0351
+      ],
+      "reference_CCT_in": 3250,
+      "reference_CCT_out": 3200,
+      "predicted_loss_stops": 1.0,
+      "predicted_shadow_ev_10_20": [
+        7.548228683229986,
+        5.551878226823975
+      ],
+      "reference_shadow_ev_10_20": [
+        7.2,
+        5.9
+      ],
+      "max_channel_energy": 0.787602047521848
+    },
+    "Diffusion 6 | 215 Half Tough Spun": {
+      "reference_product": "LEE 215 Half Tough Spun, legacy brochure",
+      "pdf_page_1based": 36,
+      "target_loss_stops": 1.4739311883324124,
+      "direct": 0.276876,
+      "scattered": 0.16002271573173796,
+      "transmission_tint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "reflection_rgb": [
+        0.229632,
+        0.229632,
+        0.229632
+      ],
+      "reference_CCT_in": null,
+      "reference_CCT_out": null,
+      "predicted_loss_stops": 1.4739311883324124,
+      "predicted_shadow_ev_10_20": [
+        5.904719653993283,
+        3.9083691975872705
+      ],
+      "reference_shadow_ev_10_20": null,
+      "max_channel_energy": 0.6665307157317379
+    },
+    "Diffusion 7 | 250 Half White Diffusion": {
+      "reference_product": "LEE 250 in TRP test",
+      "pdf_page_1based": 20,
+      "target_loss_stops": 0.8,
+      "direct": 0.301016403926973,
+      "scattered": 0.5261952351355416,
+      "transmission_tint": [
+        1.0199389371767755,
+        0.9983342384263533,
+        0.9577885683336514
+      ],
+      "reflection_rgb": [
+        0.156288,
+        0.156288,
+        0.156288
+      ],
+      "reference_CCT_in": 3250,
+      "reference_CCT_out": 3190,
+      "predicted_loss_stops": 0.8000000000000002,
+      "predicted_shadow_ev_10_20": [
+        7.622041123712071,
+        5.62569066730606
+      ],
+      "reference_shadow_ev_10_20": [
+        7.6,
+        5.7
+      ],
+      "max_channel_energy": 0.9999933599656796
+    },
+    "Diffusion 8 | Opal Frost": {
+      "reference_product": "LEE 410 Opal Frost, manufacturer Y=71%",
+      "pdf_page_1based": null,
+      "target_loss_stops": 0.4941090702700427,
+      "direct": 0.647662,
+      "scattered": 0.1200074112564973,
+      "transmission_tint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "reflection_rgb": [
+        0.0651,
+        0.0651,
+        0.0651
+      ],
+      "reference_CCT_in": null,
+      "reference_CCT_out": null,
+      "predicted_loss_stops": 0.4941090702700427,
+      "predicted_shadow_ev_10_20": [
+        5.489566443816895,
+        3.493215987410884
+      ],
+      "reference_shadow_ev_10_20": null,
+      "max_channel_energy": 0.8327694112564973
+    },
+    "Diffusion 9 | Unbleached Muslin": {
+      "reference_product": "TRP Unbleached Muslin (585)",
+      "pdf_page_1based": 65,
+      "target_loss_stops": 2.7,
+      "direct": 0.0,
+      "scattered": 0.296260815891636,
+      "transmission_tint": [
+        1.074191942049038,
+        0.9930315064853603,
+        0.8505631534909263
+      ],
+      "reflection_rgb": [
+        0.6396,
+        0.5304,
+        0.3666
+      ],
+      "reference_CCT_in": 3250,
+      "reference_CCT_out": 3040,
+      "predicted_loss_stops": 2.7,
+      "predicted_shadow_ev_10_20": [
+        6.793310764101029,
+        4.796960307695017
+      ],
+      "reference_shadow_ev_10_20": [
+        6.9,
+        5.5
+      ],
+      "max_channel_energy": 0.957840981175669
+    },
+    "Diffusion 10 | Bleached Muslin": {
+      "reference_product": "TRP Bleached Muslin (610)",
+      "pdf_page_1based": 67,
+      "target_loss_stops": 3.2,
+      "direct": 0.0,
+      "scattered": 0.2094880319168351,
+      "transmission_tint": [
+        1.0703626997222648,
+        0.9934407290238196,
+        0.8577850504322827
+      ],
+      "reflection_rgb": [
+        0.7216,
+        0.7052,
+        0.6642
+      ],
+      "reference_CCT_in": 3250,
+      "reference_CCT_out": 3050,
+      "predicted_loss_stops": 3.2,
+      "predicted_shadow_ev_10_20": [
+        6.293310764101029,
+        4.296960307695017
+      ],
+      "reference_shadow_ev_10_20": [
+        6.7,
+        5.4
+      ],
+      "max_channel_energy": 0.9458281754020076
+    }
+  }
+}

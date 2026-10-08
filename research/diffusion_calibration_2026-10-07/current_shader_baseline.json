@@ -1,0 +1,93 @@
+{
+  "status": "Authored script parameters; not a new live Blender inspection and not photometry",
+  "source_files": [
+    "add_diffusion_frame.py",
+    "extend_frame_fabrics.py"
+  ],
+  "silk_model": {
+    "diffuse_color_linear": [
+      0.65,
+      0.65,
+      0.65
+    ],
+    "reflection_mix": 0.18,
+    "presets": {
+      "Silk": {
+        "direct_mix": 0.02,
+        "translucent_color": 0.7
+      },
+      "Half Silk": {
+        "direct_mix": 0.4,
+        "translucent_color": 0.78
+      },
+      "Quarter Silk": {
+        "direct_mix": 0.7,
+        "translucent_color": 0.86
+      }
+    }
+  },
+  "expanded_model": {
+    "description": "Mix diffuse/translucent by scattered_mix, then mix result/transparent by direct_mix; shared linear color",
+    "presets": {
+      "Ultrabounce": {
+        "color_linear": [
+          0.88,
+          0.88,
+          0.88
+        ],
+        "scattered_mix": 0,
+        "direct_mix": 0,
+        "reverse_color_linear": [
+          0.004,
+          0.004,
+          0.004
+        ]
+      },
+      "215 Diffusion": {
+        "color_linear": [
+          0.78,
+          0.78,
+          0.78
+        ],
+        "scattered_mix": 0.68,
+        "direct_mix": 0.08
+      },
+      "250 Diffusion": {
+        "color_linear": [
+          0.88,
+          0.88,
+          0.88
+        ],
+        "scattered_mix": 0.76,
+        "direct_mix": 0.26
+      },
+      "Opal": {
+        "color_linear": [
+          0.93,
+          0.93,
+          0.93
+        ],
+        "scattered_mix": 0.8,
+        "direct_mix": 0.65
+      },
+      "Unbleached Muslin": {
+        "color_linear": [
+          0.82,
+          0.68,
+          0.47
+        ],
+        "scattered_mix": 0.22,
+        "direct_mix": 0
+      },
+      "Bleached Muslin": {
+        "color_linear": [
+          0.88,
+          0.86,
+          0.81
+        ],
+        "scattered_mix": 0.18,
+        "direct_mix": 0
+      }
+    }
+  }
+}

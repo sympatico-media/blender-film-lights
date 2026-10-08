@@ -1,0 +1,30 @@
+# Local caches and editor settings
+.DS_Store
+__pycache__/
+*.py[cod]
+.idea/
+.env
+.env.*
+!.env.example
+
+# Unrelated workspace artifacts and downloaded scene assets
+.atlene-template-build/
+.chart-data-*/
+/assets/
+/output/
+
+# Blender snapshots; keep the current working asset library
+*.blend
+*.blend[0-9]*
+!/library/Sympatico_Lighting_Native.blend
+
+# Generated renders, numeric arrays, logs, and packaged downloads
+*.exr
+*.npy
+*.zip
+*.pdf
+*.pptx
+*.xlsx
+*_log.txt
+
+/research/**/validation/*.png

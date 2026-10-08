@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "linear_EXR": true,
+  "denoising": false,
+  "samples": 256,
+  "max_allowed_exposure_error_stops": 0.12,
+  "measurements": {
+    "Diffusion 2 | Silk": {
+      "target_loss": 1.9,
+      "old_loss": 1.6954191687846112,
+      "new_loss": 1.9172908649802085,
+      "error_stops": 0.017290864980208598,
+      "shadow_ev_10_20": [
+        7.502433706576076,
+        5.740960963384553
+      ],
+      "reference_shadow_ev_10_20": [
+        7.4,
+        6.1
+      ]
+    },
+    "Diffusion 3 | Half Silk": {
+      "target_loss": 1.1,
+      "old_loss": 0.7458100849775027,
+      "new_loss": 1.1161407302794364,
+      "error_stops": 0.0161407302794363,
+      "shadow_ev_10_20": [
+        7.857323874515701,
+        6.0957954611507725
+      ],
+      "reference_shadow_ev_10_20": [
+        7.7,
+        6.2
+      ]
+    },
+    "Diffusion 4 | Quarter Silk": {
+      "target_loss": 1.0,
+      "old_loss": 0.3072393100520936,
+      "new_loss": 1.0114140906102933,
+      "error_stops": 0.011414090610293304,
+      "shadow_ev_10_20": [
+        7.457051722435375,
+        5.695879202343354
+      ],
+      "reference_shadow_ev_10_20": [
+        7.2,
+        5.9
+      ]
+    },
+    "Diffusion 6 | 215 Half Tough Spun": {
+      "target_loss": 1.4739311883324124,
+      "old_loss": 1.6785323683516251,
+      "new_loss": 1.4758334059815161,
+      "error_stops": 0.001902217649103699,
+      "shadow_ev_10_20": [
+        5.8172939076336725,
+        4.0523706572556595
+      ],
+      "reference_shadow_ev_10_20": null
+    },
+    "Diffusion 7 | 250 Half White Diffusion": {
+      "target_loss": 0.8,
+      "old_loss": 1.050492851101352,
+      "new_loss": 0.8087197931664452,
+      "error_stops": 0.008719793166445111,
+      "shadow_ev_10_20": [
+        7.53154901901377,
+        5.769691835134473
+      ],
+      "reference_shadow_ev_10_20": [
+        7.6,
+        5.7
+      ]
+    },
+    "Diffusion 8 | Opal Frost": {
+      "target_loss": 0.4941090702700427,
+      "old_loss": 0.43842075253385554,
+      "new_loss": 0.49499065639279,
+      "error_stops": 0.0008815861227473021,
+      "shadow_ev_10_20": [
+        5.402831728210123,
+        3.6372174417472545
+      ],
+      "reference_shadow_ev_10_20": null
+    },
+    "Diffusion 9 | Unbleached Muslin": {
+      "target_loss": 2.7,
+      "old_loss": 3.671211113119555,
+      "new_loss": 2.714348110970822,
+      "error_stops": 0.014348110970821892,
+      "shadow_ev_10_20": [
+        6.702769957246329,
+        4.944507308618975
+      ],
+      "reference_shadow_ev_10_20": [
+        6.9,
+        5.5
+      ]
+    },
+    "Diffusion 10 | Bleached Muslin": {
+      "target_loss": 3.2,
+      "old_loss": 3.6477974962274455,
+      "new_loss": 3.2115107289715366,
+      "error_stops": 0.011510728971536377,
+      "shadow_ev_10_20": [
+        6.204010633282015,
+        4.4465508465500205
+      ],
+      "reference_shadow_ev_10_20": [
+        6.7,
+        5.4
+      ]
+    }
+  }
+}

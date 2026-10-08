@@ -1,0 +1,12 @@
+{
+  "source_to_fabric_m": 0.9144,
+  "fabric_to_flag_m": 1.2192,
+  "flag_to_wall_m": 3.048,
+  "source": "80 mm Lambertian area disk; approximation to published open-eye 2K fixture",
+  "camera_xmin": -1.1,
+  "camera_xmax": 2.5,
+  "resolution": [
+    512,
+    128
+  ]
+}
