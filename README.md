@@ -1,6 +1,6 @@
 # Procedural Lighting
 
-Procedural Blender lighting assets by **Sympatico Media, LLC**: a configurable
+Procedural Blender lighting assets by **Sympatico**: a configurable
 COB light with native Fresnel, reflector and octobox attachments, a native-Area
 panel light, and a diffusion frame with ten fabric presets. Built and
 validated in **Blender 5.2.2 LTS**.

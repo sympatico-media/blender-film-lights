@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 — 2026-10-08
+
+- Cleaned up the geometry node trees behind each fixture: simplified and
+  reorganized the node networks with no change to asset controls or
+  behavior.
+
 ## 1.1.0 — 2026-10-08
 
 - Reorganized the repository for public release: moved the asset library and its
