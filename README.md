@@ -98,6 +98,14 @@ emitting-lens simulation, not refractive glass optics. Diffusion fabric
 behavior is fitted to published reference data but is not an exact
 reproduction of any single manufacturer's measured product.
 
+## A note on AI
+
+We used AI tools during development to help build and manage the geometry
+node trees behind each fixture. Those networks get large and intricate
+quickly, and AI made it practical to keep them organized and working. The
+design, the on-set knowledge behind how each light and fabric should behave,
+and the testing are ours.
+
 ## License
 
 The Blender assets (`library/`, `docs/images/`) are licensed under
