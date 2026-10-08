@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 — 2026-10-08
 
 - Reorganized the repository for public release: moved the asset library and its
   catalog file into `library/`, moved preview renders into `docs/images/`, removed
