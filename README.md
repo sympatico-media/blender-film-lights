@@ -1,7 +1,7 @@
 # Procedural Lighting
 
 Procedural Blender lighting assets by **Sympatico**: a configurable
-COB light with native Fresnel, reflector and octobox attachments, a native-Area
+COB light with native illumination in Bare, Reflector, Fresnel, and Octobox modes, a native-Area
 panel light, a diffusion frame with ten fabric presets, and procedural
 C-Stand and Combo Stand grip equipment, including a mounted fabric assembly. Built and
 validated in **Blender 5.2.2 LTS**.
@@ -43,13 +43,20 @@ Collection asset `COB Light — Native Fresnel`. Select **COB Light** for all
 controls.
 
 - Wattage, Temperature (K), RGB, and an RGB/Kelvin mix.
-- COB diameter in inches; resizing preserves the area-normalized power.
-- Attachment: Bare, Reflector, Fresnel, or Octobox.
+- COB diameter in inches; resizing changes source size while preserving power.
+- Attachment: Bare, Reflector, Fresnel, or Octobox. Every mode uses a native
+  Blender light; the visible COB disk is camera-only and adds no illumination.
+- Bare uses a disk Area light sized to the COB diameter.
+- Reflector uses a Spot light with spread derived from reflector diameter and depth.
 - Fresnel uses a native Blender Spot light (not mesh emission), with an
   independent source-radius control for shadow softness, plus a 15–45 degree
   simulated beam angle.
 - Octobox size, depth, and Full / Half / Quarter Silk fabric, with an
   optional square-cell grid and perimeter wrapper.
+- Octobox uses a disk Area source at the front fabric plane, sized to fit inside
+  the octagonal opening. Fabric selection scales power by the existing fitted
+  direct-plus-scattered transmission coefficients. This approximates the softbox
+  output; it does not trace the internal reflector and diffusion transport.
 
 ### Panel Light
 
@@ -104,6 +111,19 @@ Collection asset `C-Stand + Fabric`, under **Sympatico → Grip**.
   and pin-mount controls, using the same options as the standalone Diffusion Frame.
 - Import or duplicate the complete collection to keep the assembly together.
 
+## Updating existing COB fixtures
+
+Re-import the complete COB collection from the updated library, or run
+[`scripts/upgrade_cob_native.py`](scripts/upgrade_cob_native.py) in Blender to
+upgrade existing fixtures in the open file. The script changes the rig in memory;
+review the result and save your scene afterward. Keep the repository intact,
+since the script reads the fabric coefficients under `research/`.
+
+Bare, Reflector, and Octobox brightness and distribution change with this upgrade.
+Recheck exposure and lighting balance in existing scenes; Fresnel retains its
+previous power mapping. Existing collection and Fresnel-object names are retained
+for compatibility.
+
 ## Working with copies
 
 Append (Reuse Data) intentionally shares underlying node groups and
@@ -119,14 +139,16 @@ for predictable physical sizing.
   and its `blender_assets.cats.txt` catalog). Add this folder, not the `.blend`
   file, as the Asset Library path.
 - [`docs/images/`](docs/images/): preview renders used in this README.
+- [`scripts/`](scripts/): the native COB upgrade and a headless Cycles regression
+  test (`blender -b library/Sympatico_Lighting_Native.blend --python scripts/verify_cob_native.py`).
 - [`research/`](research/): diffusion fabric reference data, measurements, and
   the calibration scripts used to fit the fabric presets above.
 
 ## Accuracy
 
 These are artistic lighting fixtures, not certified photometric models.
-Wattage is an area-normalized Blender emission control, not calibrated
-electrical consumption or manufacturer lumens. Fresnel uses a directional
+Wattage is an artistic Blender power control, not calibrated electrical
+consumption or manufacturer lumens. Fresnel uses a directional
 emitting-lens simulation, not refractive glass optics. Diffusion fabric
 behavior is fitted to published reference data but is not an exact
 reproduction of any single manufacturer's measured product.
@@ -145,7 +167,7 @@ The Blender assets (`library/`, `docs/images/`) are licensed under
 **CC BY 4.0** — see [LICENSE-ASSETS.txt](LICENSE-ASSETS.txt) and
 [ATTRIBUTION.txt](ATTRIBUTION.txt).
 
-The research and build scripts (`research/`) are licensed under
+The research and build scripts (`research/`, `scripts/`) are licensed under
 **GPL-3.0-or-later** — see [LICENSE](LICENSE).
 
 Third-party reference materials used to calibrate the diffusion fabrics

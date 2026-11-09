@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.0 — 2026-11-09
+
+- Native Blender lights now provide COB illumination in every attachment mode:
+  disk Area sources for Bare and Octobox, Spot sources for Reflector and Fresnel.
+- The visible COB mesh no longer contributes illumination. Fresnel power mapping
+  is preserved; other modes change brightness/distribution and need exposure review.
+- Added an existing-scene upgrade script and a Cycles regression test for native-only
+  illumination, valid drivers, and Ultrabounce response across all four modes.
+
 ## 1.2.0 — 2026-11-09
 
 - Added a procedural C-Stand with height and riser controls, optional grip head and boom arm, arm positioning, and a sandbag toggle.
