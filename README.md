@@ -2,7 +2,8 @@
 
 Procedural Blender lighting assets by **Sympatico**: a configurable
 COB light with native Fresnel, reflector and octobox attachments, a native-Area
-panel light, and a diffusion frame with ten fabric presets. Built and
+panel light, a diffusion frame with ten fabric presets, and procedural
+C-Stand and Combo Stand grip equipment, including a mounted fabric assembly. Built and
 validated in **Blender 5.2.2 LTS**.
 
 | COB Light | Panel Light (Softbox) | Diffusion Frame |
@@ -24,12 +25,15 @@ validated in **Blender 5.2.2 LTS**.
    shading to see illumination.
 
 Alternative: **File → Append → `library/Sympatico_Lighting_Native.blend`**,
-then choose a Collection (COB Light, Panel Light) or Object (Diffusion Frame).
+then choose a Collection (COB Light, Panel Light, C-Stand + Fabric) or Object
+(Diffusion Frame, C-Stand, Combo Stand). Stands and the mounted fabric assembly
+appear under **Sympatico → Grip** in the Asset Browser.
 
 Native-light fixtures contain multiple objects (a control mesh plus a Spot or
 Area light). To copy a complete fixture, use **Duplicate Collection** in the
 Outliner, or drag the asset in again; duplicating only the control mesh will
-not duplicate its light.
+not duplicate its light. Likewise, duplicate the entire **C-Stand + Fabric**
+collection to keep the stand, fabric, and boom mount together.
 
 ## Assets
 
@@ -69,7 +73,36 @@ Object asset `Diffusion Frame`.
   Bleached Muslin. Eight of these are fitted to published manufacturer
   reference data — see
   [`research/diffusion_calibration_2026-10-07/`](research/diffusion_calibration_2026-10-07/).
-- Optional pin (side rod) and a Show Frame / Fabric toggle.
+- Optional pin (side rod), Show Frame, and a separate Fabric toggle.
+- **Mount at Pin** places the mounting pin center at the object origin for
+  attachment to a grip head.
+
+### C-Stand
+
+Object asset `C-Stand`, under **Sympatico → Grip**.
+
+- Stand Height and independent Riser 1 / Riser 2 extension controls in inches.
+- Optional grip head and 40-inch boom arm.
+- Arm elevation, swivel, slide, and end-grip rotation controls.
+- **Bag It** adds a saddle sandbag over the tallest leg.
+
+### Combo Stand
+
+Object asset `Combo Stand`, under **Sympatico → Grip**.
+
+- **Stand Height (in)** sets the junior receiver height; the upper riser
+  extends first, followed by the middle and lower risers.
+- **Bag It** toggles the sandbag.
+
+### C-Stand + Fabric
+
+Collection asset `C-Stand + Fabric`, under **Sympatico → Grip**.
+
+- Includes **Mounted C-Stand**, **Mounted Fabric**, and **Boom Mount**.
+- Select **Mounted C-Stand** for stand, boom, and Flag Tilt X / Y controls.
+- Select **Mounted Fabric** for frame dimensions, fabric preset, frame type,
+  and pin-mount controls, using the same options as the standalone Diffusion Frame.
+- Import or duplicate the complete collection to keep the assembly together.
 
 ## Working with copies
 
