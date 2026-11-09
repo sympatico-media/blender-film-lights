@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0 — 2026-11-09
+
+- Added a procedural C-Stand with height and riser controls, optional grip head and boom arm, arm positioning, and a sandbag toggle.
+- Added a Combo Stand with staged riser extension and a sandbag toggle.
+- Added a C-Stand + Fabric collection combining a mounted stand, fabric, and boom mount, with flag tilt controls.
+- Added the Sympatico/Grip asset catalog category.
+- Added documentation for the Diffusion Frame's Mount at Pin control and for importing and duplicating complete assemblies.
+
 ## 1.1.1 — 2026-10-08
 
 - Cleaned up the geometry node trees behind each fixture: simplified and
