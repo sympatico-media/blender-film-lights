@@ -47,14 +47,14 @@ def upgrade():
         ids = {i.identifier: i.value for i in menu.bl_rna.properties['value'].enum_items}
         fabric = getattr(mod.properties.inputs, sockets['Octobox Fabric'])
         fabrics = {i.identifier: i.value for i in fabric.bl_rna.properties['value'].enum_items}
-        children = [o for o in body.children if o.type == 'LIGHT' and o.data.type == 'SPOT']
+        children = [o for o in body.children_recursive if o.type == 'LIGHT' and o.data.type == 'SPOT']
         if len(children) != 1:
             raise RuntimeError(f"{body.name}: expected one parented native Spot, got {len(children)}")
         spot = children[0]
         # Each fixture needs independent light data/driver targets.
         if spot.data.users > 1:
             spot.data = spot.data.copy()
-        area = next((o for o in body.children if o.get('sympatico_cob_area')), None)
+        area = next((o for o in body.children_recursive if o.get('sympatico_cob_area')), None)
         if area is None:
             data = bpy.data.lights.new(body.name + ' | Native Area', 'AREA')
             area = bpy.data.objects.new(body.name + ' | Area source', data)
@@ -132,6 +132,20 @@ def upgrade():
         drive(area, 'location',
               f'(0.001 if mode=={ids["Bare"]} else d*.0254+.006)/max(abs(s),0.000001)',
               body, {'mode': prop('Attachment'), 'd': prop('Octobox Depth (in)'), 's': 'scale[2]'}, 2)
+        # Re-running the native upgrade must preserve an installed IES override.
+        if 'Light Profile' in sockets:
+            selected = getattr(mod.properties.inputs, sockets['Light Profile'])
+            default = next(i.value for i in selected.bl_rna.properties['value'].enum_items
+                           if i.identifier == 'Default')
+            for native in (spot, area):
+                curve = next(d for d in native.data.animation_data.drivers if d.data_path == 'energy')
+                original = curve.driver.expression
+                var = curve.driver.variables.new()
+                var.name = 'lp'
+                var.type = 'SINGLE_PROP'
+                var.targets[0].id = body
+                var.targets[0].data_path = prop('Light Profile')
+                curve.driver.expression = f'({original}) if lp=={default} else 0'
         updated.append(body.name)
 
     # The COB disk remains visible, but cannot emit extra illumination.

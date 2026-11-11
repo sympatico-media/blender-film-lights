@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.4.0 — 2026-11-11
+
+- Matched COB and panel yoke rotation handles to the C-Stand: visible world-space
+  dials, with the COB dial at its side handle and a larger panel dial. Both
+  use an editable angle conversion. Kit tilt now belongs to the fixture so
+  its handle works directly; the stand retains height and pan.
+
+- Moved the COB yoke into the fixture, with a Yoke toggle, Tilt control, and
+  viewport dial. Native sources follow the head; stand kits use the same fixture.
+
+- Added Combo Stand + COB Light and Combo Stand + Panel Light collection assets,
+  with height-following mounts, fixture pan/tilt controls, independent light
+  drivers, and Asset Browser previews. Stand height and pan are available
+  on the stand; tilt is on the fixture, with viewport handles. Both kits prefer Append
+  on drag-and-drop, matching the editable C-Stand + Fabric assembly.
+
+- IES profiles now automatically select Bare, Reflector, or Fresnel geometry.
+  Manual attachment and Fresnel beam settings are bypassed while IES is active
+  and restored by selecting Default.
+
+- Added the COB Light Profile dropdown: Default plus six optional STORM 1200x
+  IES distributions, using a dedicated native Point source with IES Texture nodes.
+- Preserved Default attachment lighting and added a local IES installer and
+  render regression test. Third-party IES files are not redistributed.
+
 ## 1.3.0 — 2026-11-09
 
 - Native Blender lights now provide COB illumination in every attachment mode:

@@ -28,3 +28,6 @@ __pycache__/
 *_log.txt
 
 /research/**/validation/*.png
+
+# Optional third-party photometric files installed locally by the user
+/library/ies/*.ies

@@ -25,7 +25,8 @@ validated in **Blender 5.2.2 LTS**.
    shading to see illumination.
 
 Alternative: **File → Append → `library/Sympatico_Lighting_Native.blend`**,
-then choose a Collection (COB Light, Panel Light, C-Stand + Fabric) or Object
+then choose a Collection (COB Light, Panel Light, C-Stand + Fabric, or either
+Combo Stand + Light kit) or Object
 (Diffusion Frame, C-Stand, Combo Stand). Stands and the mounted fabric assembly
 appear under **Sympatico → Grip** in the Asset Browser.
 
@@ -57,6 +58,51 @@ controls.
   the octagonal opening. Fabric selection scales power by the existing fitted
   direct-plus-scattered transmission coefficients. This approximates the softbox
   output; it does not trace the internal reflector and diffusion transport.
+
+### COB Light Profile (Cycles)
+
+**Light Profile** defaults to **Default**, preserving the attachment lighting above.
+The optional choices are STORM 1200x Bare Head, CPC 15° / 30° / 45°, and F12
+Fresnel Spot / Wide.
+
+Selecting a profile activates a dedicated native Point light with an IES Texture
+shader and switches off the normal Spot/Area sources. This avoids clipping the
+IES beam with a second Spot cone. Temperature, RGB mix, and Wattage still work.
+Profiles are normalized to the same peak; Wattage is an artistic intensity
+control, **not calibrated STORM 1200x electrical power or measured lux**.
+
+The profile automatically chooses matching attachment geometry:
+**Bare Head → Bare**, **CPC 15° / 30° / 45° → Reflector**, and
+**F12 Spot / Wide → Fresnel**. Manual Attachment and Fresnel Beam settings are
+bypassed while an IES profile is active. The saved manual attachment value may
+remain displayed; the profile determines the actual geometry. Returning to
+**Default** restores the manual settings, including adjustable Fresnel beam and
+the Octobox's distributed Area source and fabric-loss behavior.
+
+F12 Spot / Wide use the existing 15° / 45° lens geometry poses for appearance;
+the measured IES file determines the actual beam. Source radius remains adjustable
+for shadow softness. IES mode does not model a softbox.
+
+The six third-party IES files are **optional local downloads**, not included in
+the repository or embedded in the asset library. Get the STORM 1200x ZIP from
+[Aputure's official IES page](https://help.aputure.com/en/general-help/ies-files),
+extract it, then run from the repository root:
+
+```sh
+blender -b library/Sympatico_Lighting_Native.blend \
+  --python scripts/add_cob_profiles.py -- \
+  --ies-dir "/path/to/STORM 1200x IES Files" --save
+```
+
+This installs the files under `library/ies/` and wires the dropdown. Keep that
+folder with the library. **Selecting an IES profile without its file produces no
+light; choose Default until the files are installed.** When moving an appended
+fixture to another computer, also transfer/relink its external IES dependencies
+subject to the applicable permissions.
+
+The IES files retain their owners' rights and are not covered by this project's
+CC BY or GPL licenses. Redistribution permission has not been established;
+the download link is not treated as an open license.
 
 ### Panel Light
 
@@ -111,6 +157,31 @@ Collection asset `C-Stand + Fabric`, under **Sympatico → Grip**.
   and pin-mount controls, using the same options as the standalone Diffusion Frame.
 - Import or duplicate the complete collection to keep the assembly together.
 
+### Combo Stand + Light kits
+
+Two collection assets under **Sympatico → Lighting**:
+
+| Combo Stand + COB Light | Combo Stand + Panel Light |
+| --- | --- |
+| ![Combo Stand with COB](docs/images/Combo_Stand_COB_Preview.png) | ![Combo Stand with Panel](docs/images/Combo_Stand_Panel_Preview.png) |
+
+Drag either collection from the Asset Browser to bring in the complete stand,
+mount, fixture, and native light sources. Both kits automatically use **Append**,
+just like C-Stand + Fabric, so the stand and fixture controls are editable on drop.
+
+- Select **COB Kit | Combo Stand** or **Panel Kit | Combo Stand** for **Stand Height**,
+  **Bag It**, and **Light Pan (deg)** in the modifier.
+  The stand also has a height arrow and pan dial in the viewport. Height changes move the complete mounted fixture.
+- Move the stand object to reposition the entire kit. Its **Light Pan (deg)** control rotates the fixture without turning the stand legs.
+- Select **COB Kit | COB Light** or **Panel Kit | Panel Light** for the existing
+  lighting controls. The COB retains Light Profile and automatic IES attachments.
+- Select either fixture and drag its **yellow yoke circle** to tilt the light,
+  or use **Tilt (deg)** in the fixture modifier.
+- The panel's junior-pin shoulder stays seated when panel dimensions change.
+  Keep **Yoke** enabled for the mounted panel.
+- Import the kit again to create another independent rig. To duplicate in place,
+  duplicate the **entire collection**, including helpers and light sources.
+
 ## Updating existing COB fixtures
 
 Re-import the complete COB collection from the updated library, or run
@@ -141,6 +212,8 @@ for predictable physical sizing.
 - [`docs/images/`](docs/images/): preview renders used in this README.
 - [`scripts/`](scripts/): the native COB upgrade and a headless Cycles regression
   test (`blender -b library/Sympatico_Lighting_Native.blend --python scripts/verify_cob_native.py`).
+  `add_cob_profiles.py` installs local IES files; `verify_cob_profiles.py` tests
+  their switching and beam widths after installation.
 - [`research/`](research/): diffusion fabric reference data, measurements, and
   the calibration scripts used to fit the fabric presets above.
 
@@ -174,3 +247,14 @@ Third-party reference materials used to calibrate the diffusion fabrics
 retain their respective owners' rights; see
 [ATTRIBUTION.txt](ATTRIBUTION.txt) and
 [`research/diffusion_calibration_2026-10-07/sources.json`](research/diffusion_calibration_2026-10-07/sources.json).
+
+### COB yoke and tilt
+
+The COB fixture includes its own **Yoke** toggle and **Tilt (deg)** control,
+matching the panel light. Tilt rotates the head and all native light sources
+together while the yoke stays fixed. Mounted kits use the same direct fixture control: select the light and drag
+its yellow yoke circle. The stand controls height and pan.
+
+**IES profiles require Cycles.** Eevee does not evaluate the IES light texture
+and the point source spills in all directions; changing its rotation will not
+restore the profile in Eevee.

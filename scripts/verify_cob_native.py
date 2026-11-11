@@ -9,7 +9,7 @@ import bpy, math, json
 from mathutils import Vector
 o=bpy.data.objects["COB Light"]
 light=bpy.data.objects["COB Light | Fresnel Spot"]
-area=next(x for x in o.children if x.type=="LIGHT" and x.data.type=="AREA")
+area=next(x for x in o.children_recursive if x.type=="LIGHT" and x.data.type=="AREA")
 for obj in bpy.data.objects:
     obj.hide_render=obj not in [o,light,area]
 o.location=(0,0,1.2)
