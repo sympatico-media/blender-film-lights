@@ -1,10 +1,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Install optional, user-supplied STORM IES files and add COB Light Profile menus.
+"""Install STORM IES files and add COB Light Profile menus.
 
 blender -b library/Sympatico_Lighting_Native.blend --python scripts/add_cob_profiles.py -- --ies-dir "/path/to/STORM 1200x IES Files" --save
 
 Without --save this only changes the open file in memory. IES files are copied to
-library/ies/ locally and are deliberately excluded from Git.
+library/ies/. Bundled manufacturer data is outside the project licenses.
 """
 import argparse
 import math

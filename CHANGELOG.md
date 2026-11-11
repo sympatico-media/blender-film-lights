@@ -20,10 +20,11 @@
   Manual attachment and Fresnel beam settings are bypassed while IES is active
   and restored by selecting Default.
 
-- Added the COB Light Profile dropdown: Default plus six optional STORM 1200x
+- Added the COB Light Profile dropdown: Default plus six bundled STORM 1200x
   IES distributions, using a dedicated native Point source with IES Texture nodes.
 - Preserved Default attachment lighting and added a local IES installer and
-  render regression test. Third-party IES files are not redistributed.
+  render regression test. The six manufacturer IES files are bundled externally
+  under library/ies/ with attribution, outside the project’s CC BY/GPL licenses.
 
 ## 1.3.0 — 2026-11-09
 

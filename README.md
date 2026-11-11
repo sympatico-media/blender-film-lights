@@ -83,10 +83,12 @@ F12 Spot / Wide use the existing 15° / 45° lens geometry poses for appearance;
 the measured IES file determines the actual beam. Source radius remains adjustable
 for shadow softness. IES mode does not model a softbox.
 
-The six third-party IES files are **optional local downloads**, not included in
-the repository or embedded in the asset library. Get the STORM 1200x ZIP from
-[Aputure's official IES page](https://help.aputure.com/en/general-help/ies-files),
-extract it, then run from the repository root:
+The six STORM 1200x IES files are included under **`library/ies/`** in the
+repository and release ZIP. Keep that folder beside the blend file so the
+profiles work immediately. They remain external files rather than packed data.
+
+Source: [Aputure’s official IES page](https://help.aputure.com/en/general-help/ies-files).
+To reinstall from a separately downloaded manufacturer ZIP, extract it and run:
 
 ```sh
 blender -b library/Sympatico_Lighting_Native.blend \
@@ -94,9 +96,9 @@ blender -b library/Sympatico_Lighting_Native.blend \
   --ies-dir "/path/to/STORM 1200x IES Files" --save
 ```
 
-This installs the files under `library/ies/` and wires the dropdown. Keep that
-folder with the library. **Selecting an IES profile without its file produces no
-light; choose Default until the files are installed.** When moving an appended
+This reinstalls the files under `library/ies/` and wires the dropdown.
+**If an IES file is missing, selecting its profile produces no light; choose
+Default or restore the `ies/` folder.** When moving an appended
 fixture to another computer, also transfer/relink its external IES dependencies
 subject to the applicable permissions.
 

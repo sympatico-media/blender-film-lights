@@ -43,12 +43,12 @@ source register, including access dates and authority notes. Third-party
 reference materials retain their respective owners' rights and are not
 covered by either license above.
 
-Optional IES light profiles
+Bundled third-party IES light profiles
 ------------------------------------------------------------------------
 STORM 1200x IES measurements identify APUTURE as manufacturer and Shenzhen
 Southern LCS Compliance Testing Laboratory Ltd. as the test lab.
 Official download: https://help.aputure.com/en/general-help/ies-files
-The files are user-installed external dependencies and are not redistributed
-with this project. No CC BY or GPL license is asserted over these files.
+The six files in library/ies/ are bundled external dependencies, supplied by
+the project maintainer. No CC BY or GPL license is asserted over these files.
 Redistribution permission has not been established as of 2026-11-11.
 Product names identify the source data; no endorsement is implied.
